@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+    <script language="javascript" type="text/javascript" src="Javascript/jquery-1.11.3.js"></script>
+    
+    </head>
+<body>
+    <div id="stressRelief">Stress Relief Generator</div>
+    <div id="wrapper"><iframe id="randomize" width="640" height="390" frameborder="0" allowfullscreen></iframe>
+
+<script type="text/javascript"> 
+
+var videos = [
+    "http://www.youtube.com/embed/Ez2OSSgCMlM",
+    "http://www.youtube.com/embed/dgHRwscpPIA",
+    "http://www.youtube.com/embed/0JboM-STb4E",
+    "http://www.youtube.com/embed/L3MtFGWRXAA",
+    "http://www.youtube.com/embed/nGeKSiCQkPw",
+    "http://www.youtube.com/embed/t0KwtuYyy3A",
+    "http://www.youtube.com/embed/niLxhiywXqw",
+    "http://www.youtube.com/embed/p336IIjZCl8",
+    "http://www.youtube.com/embed/re76yiu4FsY",
+    "http://www.youtube.com/embed/L49VXZwfup8",
+    "http://www.youtube.com/embed/eaIvk1cSyG8",
+    "http://www.youtube.com/embed/l-gQLqv9f4o"
+    
+    ];
+    
+
+var maxVideo = videos.length - 1;
+
+(function() {
+var selection = Math.round(Math.random() * maxVideo);
+document.getElementById("randomize").src = videos[selection];
+})();
+
+</script>
+
+    <div id="refreshPage">I'm still stressed!</div>
+    
+    <script>
+        
+    $('#refreshPage').click(function() {
+        location.reload();
+    }); 
+        
+    </script>
+        
+    </div>
+    
+</body>
+</html>
